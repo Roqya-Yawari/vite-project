@@ -2,17 +2,14 @@
 
 import "./App.css";
 import Accordian from "./components/Accordian";
+import star from "../src/assets/images/icon-star.svg";
 
 function App() {
   return (
     <>
       <div className="container absolute   left-1/2  -translate-x-1/2 rounded-md  bg-white w-100  shadow-sm shadow-gray-200 p-3  top-[10%] md:top-1/2 md:-translate-y-1/2 max-sm:w-[250px] md:w-[400px]  ">
         <div className="flex justify-start p-3 items-center gap-3">
-          <img
-            className="w-5"
-            src="../src/assets/images/icon-star.svg"
-            alt="star icon"
-          />
+          <img className="w-5" src={star} alt="star icon" />
           <h1 className="text-2xl font-bold text-purple-950">FAQs</h1>
         </div>
         <Accordian
