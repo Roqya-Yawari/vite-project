@@ -1,0 +1,16 @@
+@media (min-width: 200px) {
+  #root {
+    background-image: url("../src/assets/images/background-pattern-mobile.svg");
+    /* max-width: 1280px; */
+    /* margin: 0 auto; */
+    padding: 4rem;
+    height: 100px;
+    text-align: center;
+  }
+}
+@media (min-width: 760px) {
+  #root {
+    background-image: url("../src/assets/images/background-pattern-desktop.svg");
+    height: 200px;
+  }
+}
