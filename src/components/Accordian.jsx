@@ -4,11 +4,7 @@
 import MinusIcon from "./MinusIcon";
 import PlusIcon from "./PlusIcon";
 
-import { useState } from "react";
-
-function Accordian({ title, describtion, defaultAccordion = false }) {
-  const [close, setClose] = useState(defaultAccordion);
-
+function Accordian({ title, describtion, open, onClick }) {
   return (
     <>
       <div className="rounded-sm shadow shadow-gray-200  p-2 ">
@@ -16,15 +12,15 @@ function Accordian({ title, describtion, defaultAccordion = false }) {
           <p className="text-purple-950 text-left text-xs md:text-sm text-bold  ">
             {title}
           </p>
-          {close ? (
-            <PlusIcon onClick={() => setClose(false)} />
+          {open ? (
+            <MinusIcon onClick={onClick} />
           ) : (
-            <MinusIcon onClick={() => setClose(true)} />
+            <PlusIcon onClick={onClick} />
           )}
         </div>
         <p
           className={`text-xs text-left text-purple-800 
-          ${close ? "hidden" : "block"} 
+          ${open ? "block" : "hidden"} 
           }`}
         >
           {describtion}
